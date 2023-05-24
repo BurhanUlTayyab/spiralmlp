@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python -m torch.distributed.launch --master_port 12347 --nproc_per_node=8 --use_env main.py --model CycleMLP_B5 --batch-size 64 --data-path dataset_imagenet/imagenet --data-set IMNET --output_dir result --epochs 10
